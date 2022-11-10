@@ -13,15 +13,20 @@ namespace LichnieDelaStudentov
 {
     public class SubSystemStudent
     {
-
+      //имя
         protected string name;
+      //курс
         protected int course;
+      //пол
         protected string pol;
+      //дата рождения
         protected string date;
+      //место рождения
         protected string born;
+      //место жительсва
         protected string live;
 
-
+//присваивание значений
         public SubSystemStudent(string name, int course, string pol, string date, string born, string live)
         {
             this.name = name;
@@ -32,43 +37,44 @@ namespace LichnieDelaStudentov
             this.live = live;
         }
 
-
+//получение значений имени студента
         public string Name
         {
             get { return name; }
             set { name = value; }
         }
-
+//получение значений курса студента
         public int Course
         {
             get { return course; }
             set { course = value; }
         }
-
+//получение значений пола студента
         public string Pol
         {
             get { return pol; }
             set { pol = value; }
         }
-
+//получение значений даты рождения
         public string Date
         {
             get { return date; }
             set { date = value; }
         }
+      //получение значений места рждения
         public string Born
         {
             get { return born; }
             set { born = value; }
         }
-
+//получение значений места жительства
         public string Live
         {
             get { return live; }
             set { live = value; }
         }
 
-
+//вывод данных о студентах
         public void Print()
         {
             Console.WriteLine(" ");
@@ -103,14 +109,14 @@ namespace LichnieDelaStudentov
 
         }
 
-
+//получение номера справки
         public string Nom
         {
             get { return nom; }
             set { nom = value; }
         }
 
-
+//функция вывода справки
         public new void Print()
         {
             Console.Write("СПРАВКА №" + nom + " ВЫДАНА СТУДЕНТУ: ");
@@ -143,7 +149,7 @@ namespace LichnieDelaStudentov
             base.name = name;
         }
 
-
+//получение темы отчета
         public string Topic
         {
             get { return topic; }
@@ -155,7 +161,7 @@ namespace LichnieDelaStudentov
             topic = value;
         }
 
-
+//функция вывода отчета
         public new void Print()
         {
             Console.Write("СТУДЕНТ: ");
@@ -192,7 +198,7 @@ namespace LichnieDelaStudentov
             SubSystemStudent st18 = new SubSystemStudent("Кадетов О.И.", 4, "Мужской", "23.08.2001", "Тула", "Тула");
             SubSystemStudent st19 = new SubSystemStudent("Юрьев Ю.Ю.", 4, "Мужской", "11.11.2001", "Калуга", "Тула");
             SubSystemStudent st20 = new SubSystemStudent("Лазарев С.С.", 4, "Мужской", "27.01.2001", "Тула", "Тула");
-
+//меню
             Console.WriteLine("Выполнила Савицкая Алина");
             Console.WriteLine("Выберите действие:");
             Console.WriteLine("Dela - вывести личные дела студентов");
@@ -200,8 +206,10 @@ namespace LichnieDelaStudentov
             Console.WriteLine("Otchet - вывести отчет");
             string n;
             n = Console.ReadLine();
+//выборы меню          
             switch (n)
             {
+//личные дела студентов                
                 case "Dela":
                     Console.WriteLine("===ЛИЧНЫЕ ДЕЛА ВСЕХ СТУДЕНТОВ===");
                     st1.Print();
@@ -225,13 +233,13 @@ namespace LichnieDelaStudentov
                     st19.Print();
                     st20.Print();
                     break;
-
+//справки
                 case "Spravka":
                     SubSystemSpravka spr1 = new SubSystemSpravka("5 о временной нетрудоспособности студента", st1.Name, st1.Course, st1.Pol, st1.Date, st1.Born, st1.Live);
                     SubSystemSpravka spr5 = new SubSystemSpravka("290 о заселении в общажитие", st5.Name, st5.Course, st5.Pol, st5.Date, st5.Born, st5.Live);
                     SubSystemSpravka spr8 = new SubSystemSpravka("124 об отчислении", st8.Name, st8.Course, st8.Pol, st8.Date, st8.Born, st8.Live);
                     SubSystemSpravka spr20 = new SubSystemSpravka("76 для материальной помощи", st20.Name, st20.Course, st20.Pol, st20.Date, st20.Born, st20.Live);
-
+//вывод справки
                     Console.WriteLine("---------------------");
                     Console.WriteLine("===СПРАВКИ ДЛЯ СТУДЕНТОВ===");
                     Console.WriteLine(" ");
@@ -240,6 +248,7 @@ namespace LichnieDelaStudentov
                     spr8.Print();
                     spr20.Print();
                     break;
+//отчеты                
                 case "Otchet":
                     SubSystemOtchet ot1 = new SubSystemOtchet(st1.Name, st1.Course, st1.Pol, st1.Date, st1.Born, st1.Live, "");
                     SubSystemOtchet ot2 = new SubSystemOtchet(st2.Name, st2.Course, st2.Pol, st2.Date, st2.Born, st2.Live, "");
@@ -261,7 +270,7 @@ namespace LichnieDelaStudentov
                     SubSystemOtchet ot18 = new SubSystemOtchet(st18.Name, st18.Course, st18.Pol, st18.Date, st18.Born, st18.Live, "");
                     SubSystemOtchet ot19 = new SubSystemOtchet(st19.Name, st19.Course, st19.Pol, st19.Date, st19.Born, st19.Live, "");
                     SubSystemOtchet ot20 = new SubSystemOtchet(st20.Name, st20.Course, st20.Pol, st20.Date, st20.Born, st20.Live, "");
-
+//вывод отчетов
                     Console.WriteLine("---------------------");
                     Console.WriteLine("===ОЧЕТ О ПЕРЕВОДЕ СТУДЕНТОВ НА СЛЕДУЮЩИЙ КУРС===");
                     ot1.Print();
