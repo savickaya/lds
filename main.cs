@@ -148,11 +148,17 @@ namespace LichnieDelaStudentov
             base(name, course, pol, date, born, live)
         {
             NewMethodBase(name);
+//присваивание свойству  значение 
             this.course = course;
+//присваивание свойству  значение 
             this.pol = pol;
+//присваивание свойству  значение 
             this.date = date;
+//присваивание свойству  значение 
             this.born = born;
+//присваивание свойству  значение 
             this.live = live;
+//присваивание свойству  значение 
             this.topic = topic;
         }
 
