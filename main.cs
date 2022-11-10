@@ -29,11 +29,17 @@ namespace LichnieDelaStudentov
 //присваивание значений
         public SubSystemStudent(string name, int course, string pol, string date, string born, string live)
         {
+          //присваивание свойству name значение name
             this.name = name;
+          //присваивание свойству course значение course
             this.course = course;
+          //присваивание свойству pol значение pol
             this.pol = pol;
+          //присваивание свойству date значение date
             this.date = date;
+          //присваивание свойству born значение born
             this.born = born;
+          //присваивание свойству live значение live
             this.live = live;
         }
 
@@ -93,17 +99,23 @@ namespace LichnieDelaStudentov
 
         protected string nom;
 
-
+//присваивание значений
         public SubSystemSpravka(string nom, string name, int course, string pol, string date, string born, string live) :
             base(name, course, pol, date, born, live)
         {
-
+//присваивание свойству  значение 
             this.nom = nom;
+//присваивание свойству  значение 
             base.name = name;
+//присваивание свойству  значение 
             this.course = course;
+//присваивание свойству  значение 
             this.pol = pol;
+//присваивание свойству  значение 
             this.date = date;
+//присваивание свойству  значение 
             this.born = born;
+//присваивание свойству  значение 
             this.live = live;
 
 
